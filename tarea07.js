@@ -78,3 +78,26 @@ const mensaje = auto.xxxxxxxxxxxx.xxxx(moto);
 // Imprimir el mensaje
 console.log(mensaje); // Debe imprimir: La marca de la moto es Honda.
  */
+
+// crear Objeto auto
+const auto = {
+    marca: 'Toyota',
+    mostrarMarca: function() {
+        return `La marca del auto es ${this.marca}.`;
+    }
+};
+
+// crear objeto moto
+const moto = {
+    marca: 'Honda'
+};
+
+/* Llamar al metodo mostrarMarca del objeto auto con el contexto de 
+moto usando call()*/
+const mensaje = auto.mostrarMarca.call(moto);
+
+// Imprimir el mensaje
+console.log("*************** Problema II ***************");
+console.log(mensaje); 
+console.log(" ");
+console.log("==========================================================");
