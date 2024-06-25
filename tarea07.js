@@ -379,11 +379,26 @@ console.log(cuentaBancaria);
 // }
  */
 
+//creacion de objeto cuentaBancaria
+const cuentaBancaria = {
+    titular: 'Juan Perez',
+    saldo: 1000,
+};
 
+//creacion de funcion actualizarSaldo
+function actualizarSaldo (monto) {
+    this.saldo += monto;
+};
+
+//monto a agregar
+const monto = 500;
+
+// Usar apply() para invocar actualizarSaldo con el contexto de cuentaBancaria y el monto a agregar
+actualizarSaldo.apply(cuentaBancaria, [monto]);
 
 
 // Imprimir 
 console.log("*************** Problema VII ***************");
-console.log();
+console.log(cuentaBancaria);
 console.log(" ");
 console.log("==========================================================");
