@@ -310,13 +310,29 @@ los molinos de viento']
 // }
  */
 
+//creacion de objeto 'libro'
+const libro = {
+    titulo: 'El Quijote',
+    autor: 'Miguel de Cervantes'
+};
 
+// creacion de funcion 'agregarCapitulos'
+function agregarCapitulos (capitulos) {
+    this.capitulos = capitulos;
+}
+
+//array de capitulos
+const capitulos = ['Capitulo 1: En un lugar de la Mancha', 'Capitulo 2: De los molinos de viento'];
+
+// usar apply() para invocar agregarCapitulos con el contexto de libro
+//y el array de capitulos
+agregarCapitulos.apply(libro, [capitulos]);
 
 
 
 // Imprimir 
 console.log("*************** Problema VI ***************");
-console.log();
+console.log(libro);
 console.log(" ");
 console.log("==========================================================");
 
