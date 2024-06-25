@@ -148,7 +148,7 @@ function saludar () {
 const saludo1 = saludar.call(persona2);
 
 
-// Imprimir el área del cuadrado
+// Imprimir el saludo
 console.log("*************** Problema III ***************");
 console.log(saludo1);
 console.log(" ");
@@ -208,3 +208,166 @@ console.log(areaCuadrado);
 console.log(" ");
 console.log("==========================================================");
 
+
+//-----------------------------------------------------------------------------------
+/**
+ * Uso de .apply( )
+ * 
+Problema V (15 puntos)
+Crea dos objetos, `persona1` y `persona2`, cada uno con una propiedad
+`nombre`. Define una función `presentar` que devuelva un mensaje de
+presentación utilizando la propiedad `nombre`. Usa `apply()` para
+invocar la función `presentar` con el contexto de `persona2`.
+
+// Objeto persona1
+const xxxxxxxx = {
+nombre: 'Carlos'
+};
+
+// Objeto persona2
+const xxxxxxxx = {
+nombre: 'Ana'
+};
+
+// Función presentar
+function xxxxxxxxx() {
+return `Hola, soy ${this.nombre}.`;
+}
+
+// Usar apply() para invocar presentar con el contexto de persona2
+const presentacion = presentar.apply(xxxxxxxx);
+
+// Imprimir la presentación
+console.log(presentacion); // Debe imprimir: Hola, soy Ana
+ */
+
+//creacion de objeto persona3
+const persona3 = {
+    nombre: 'Carlos',
+};
+
+//creacion de objeto persona4
+const persona4 = {
+    nombre: 'Ana',
+};
+
+//creacion de la funcion presentar
+function presentar(){
+    return `Hola, soy ${this.nombre}.`;
+}
+
+// Usar apply() para invocar presentar con el contexto de persona2
+const presentacion = presentar.apply(persona4);
+
+
+// Imprimir 
+console.log("*************** Problema V ***************");
+console.log(presentacion);
+console.log(" ");
+console.log("==========================================================");
+ 
+
+
+//-----------------------------------------------------------------------------------
+/**
+ * Problema VI (15 puntos)
+ * 
+Expansión de Objeto con Array
+Crea un objeto `libro` con propiedades `titulo` y `autor`. Define una
+función `agregarCapitulos` que tome un array de capítulos y los agregue
+como una nueva propiedad `capitulos` al objeto `libro`. Usa `apply()`
+para invocar la función `agregarCapitulos` con el contexto del objeto
+`libro` y un array de capítulos.
+
+// Objeto libro
+const xxxxx = {
+xxxxxx: 'El Quijote',
+xxxxx: 'Miguel de Cervantes'
+};
+
+// Función agregarCapitulos
+function xxxxxxxxxxxxxxxx(capitulos) {
+this.capitulos = capitulos;
+}
+
+// Array de capítulos
+const capitulos = ['Capítulo 1: En un lugar de la Mancha', 'Capítulo 2: De
+los molinos de viento'];
+
+// Usar apply() para invocar agregarCapitulos con el contexto de libro y
+el array de capítulos
+agregarCapitulos.apply(libro, [xxxxxxxxx]);
+
+// Imprimir el objeto libro con los capítulos agregados
+console.log(libro);
+
+// Debe imprimir:
+// {
+// titulo: 'El Quijote',
+// autor: 'Miguel de Cervantes',
+// capitulos: ['Capítulo 1: En un lugar de la Mancha', 'Capítulo 2: De
+los molinos de viento']
+// }
+ */
+
+
+
+
+
+// Imprimir 
+console.log("*************** Problema VI ***************");
+console.log();
+console.log(" ");
+console.log("==========================================================");
+
+
+
+
+//-----------------------------------------------------------------------------------
+
+/**
+ * Problema VII (20 puntos)
+ * 
+Actualización de Saldo en Cuenta Bancaria
+Crea un objeto `cuentaBancaria` con propiedades `titular` y `saldo`.
+Define una función `actualizarSaldo` que tome un monto y lo sume al
+saldo actual de la cuenta. Usa `apply()` para invocar la función
+`actualizarSaldo` con el contexto del objeto `cuentaBancaria` y un array
+que contenga el monto a agregar.
+
+// Objeto cuentaBancaria
+const xxxxxxxxxxxxxx = {
+xxxxxxx: 'Juan Pérez',
+xxxxx: 1000
+};
+
+// Función actualizarSaldo
+function xxxxxxxxxxxxxxx(monto) {
+this.saldo += monto;
+}
+
+// Monto a agregar
+const monto = 500;
+
+// Usar apply() para invocar actualizarSaldo con el contexto de
+cuentaBancaria y el monto a agregar
+actualizarSaldo.xxxxx(cuentaBancaria, [xxxxx]);
+
+// Imprimir el objeto cuentaBancaria con el saldo actualizado
+console.log(cuentaBancaria);
+
+// Debe imprimir:
+// {
+// titular: 'Juan Pérez',
+// saldo: 1500
+// }
+ */
+
+
+
+
+// Imprimir 
+console.log("*************** Problema VII ***************");
+console.log();
+console.log(" ");
+console.log("==========================================================");
